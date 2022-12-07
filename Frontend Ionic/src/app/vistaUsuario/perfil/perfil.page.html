@@ -1,0 +1,82 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item >
+    <ion-title slot="end">
+      {{perfil[0].name}}
+    </ion-title>
+  
+    <ion-select 
+    interface="popover" 
+    placeholder="Roles" 
+    >
+      <ion-select-option *ngFor="let rol of perfil" >{{rol.nombreRol}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content> -->
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title><ion-icon name="arrow-undo" [routerLink]="['/home']"></ion-icon>Perfile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid class="colores">
+      <center>
+        <ion-row>
+          <ion-col>
+              <img src="assets/img/perfil2.png" alt="Profile picture" class="profile-picture">         
+          </ion-col>
+        </ion-row>
+        <h1>{{perfil[0].name}}</h1>
+      </center>
+      <ion-list class="colores">
+        <ion-list-header><ion-icon name='call' item-start></ion-icon>
+          Actividades asigando 
+        </ion-list-header>
+
+        <ion-item>
+          <!-- <ion-icon name='call' item-start></ion-icon> -->
+          <!-- <a href="tel:8095550000">(809) 555-0000</a> -->
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let rolperf of perfil"> 
+                <!-- <ion-label >{{rolperf.nombreRol}}</ion-label>
+                <ion-label>{{rolperf.fechaFinal}}</ion-label> -->
+                <ion-item><h2>{{rolperf.nombreRol}}</h2><br></ion-item>
+                <ion-item><h3>{{rolperf.fechaInicio}}</h3></ion-item>
+                <ion-item><h3>{{rolperf.fechaFinal}}</h3></ion-item>
+                <!-- <ion-button color="success" (click)="EliminarUsuarios(listUsu.id)">Eliminar</ion-button>
+                <ion-button color="success" (click)="edit(listUsu.id, true)">Edit</ion-button>      -->
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-item>
+<!-- 
+        <ion-item>
+          <ion-icon name='mail' item-start></ion-icon>
+          <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a>
+        </ion-item> -->
+      </ion-list>
+    </ion-grid>
+</ion-content>
